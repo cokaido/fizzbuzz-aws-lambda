@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "lib": ["es2020"],
+    "target": "es2019",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "noEmit": false,
+    "allowJs": false,
+    "sourceMap": true,
+    "incremental": true,
+    "declaration": true,
+    "alwaysStrict": true,
+    "skipLibCheck": true,
+    "noImplicitAny": true,
+    "removeComments": true,
+    "noUnusedLocals": true,
+    "noImplicitThis": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "strictNullChecks": true,
+    "noImplicitReturns": true,
+    "noUnusedParameters": true,
+    "downlevelIteration": true,
+    "noImplicitOverride": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "noUncheckedIndexedAccess": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true,
+    "strictPropertyInitialization": true,
+    "forceConsistentCasingInFileNames": true,
+    "noPropertyAccessFromIndexSignature": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.js"],
+  "exclude": [
+    "node_modules/**/*",
+  ]
+}
