@@ -10,3 +10,15 @@ This program will be :
 - Published through an API Gateway
 - Deployed using Terraform
   
+
+Intructions
+
+- Run npm install  to install all the dependencies
+- Run /deploy.sh to deploy
+  
+
+---- How to call lambda after deployment --- 
+from console : 
+curl -X POST https://fizzbuzz.solidroots.es/fizzbuzz -d '{"number": "3"}'
+
+Or use RapidAPI extension or postman
