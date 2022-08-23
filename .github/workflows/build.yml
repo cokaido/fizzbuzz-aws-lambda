@@ -38,3 +38,8 @@ jobs:
 
       - name: Create aws package
         run: npm run postbuild
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: fizzbuzz_aws_lambda
+          path: package.zip

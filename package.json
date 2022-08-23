@@ -7,7 +7,7 @@
         "prebuild": "rm -rf dist",
         "clean": "rm -rf dist",
         "build": "esbuild src/handlers/*.ts --bundle --minify --sourcemap --platform=node --target=es2020 --outdir=dist",
-        "postbuild": "cd dist && zip -r index.zip *.js",
+        "postbuild": "cd dist && zip -r package.zip *.js",
         "precommit": "npm-run-all -p clean lint types test build",
         "test": "jest",
         "test:ci": "jest test --watchAll=false --coverage=true",
