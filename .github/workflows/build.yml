@@ -42,4 +42,4 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: fizzbuzz_aws_lambda
-          path: package.zip
+          path: ./dist/package.zip
