@@ -1,6 +1,6 @@
 {
-    "name": "sample-app-backend",
-    "description": "delete-test-01-description",
+    "name": "Fizzbuzz",
+    "description": "Fizzbuzz lambda kata",
     "version": "0.0.1",
     "private": true,
        "scripts": {
