@@ -9,13 +9,16 @@ This program will be :
 - Hosted on an AWS lambda 
 - Published through an API Gateway
 - Deployed using Terraform
-  
+
+The scaffolding project uses husky 
+
 
 Intructions
 
+- Configure husky hook :  
 - Run npm install  to install all the dependencies
 - Run /deploy.sh to deploy
-  
+   
 
 ---- How to call lambda after deployment --- 
 from console : 
