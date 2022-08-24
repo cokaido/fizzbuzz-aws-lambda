@@ -43,8 +43,9 @@ jobs:
         with:
           name: fizzbuzz_aws_lambda
           path: ./dist/package.zip
+
       - name: Terraform Init
-      - uses: hashicorp/terraform-github-actions/init@v0.4.0
+        uses: hashicorp/terraform-github-actions/init@v0.4.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TF_ACTION_WORKING_DIR: 'terraform'
@@ -52,7 +53,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
       - name: Terraform Validate
-      - uses: hashicorp/terraform-github-actions/validate@v0.3.7
+        uses: hashicorp/terraform-github-actions/validate@v0.3.7
     
       - name: Terraform Apply
         uses: hashicorp/terraform-github-actions/apply@v0.4.0
