@@ -3,7 +3,16 @@ import { APIGatewayEvent, APIGatewayProxyResult } from 'aws-lambda';
 import { fizzbuzz_generator } from '../domain/fizzbuzz';
 
 export const handler = async (event: APIGatewayEvent): Promise<APIGatewayProxyResult> => {
-  const number = parseInt(JSON.parse(event.body!).number);
+  if (!event.body) {
+    return {
+      statusCode: 400,
+      body: JSON.stringify({
+        message: 'Number parameter missing',
+      }),
+    };
+  }
+
+  const number = parseInt(JSON.parse(event.body).number);
 
   const output = fizzbuzz_generator(number);
 
