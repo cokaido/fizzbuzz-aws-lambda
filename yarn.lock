@@ -801,7 +801,7 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@typescript-eslint/eslint-plugin@^5.33.1":
+"@typescript-eslint/eslint-plugin@^5.40.1":
   version "5.40.1"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-5.40.1.tgz#3203a6ff396b1194083faaa6e5110c401201d7d5"
   integrity sha512-FsWboKkWdytGiXT5O1/R9j37YgcjO8MKHSUmWnIEjVaz0krHkplPnYi7mwdb+5+cs0toFNQb0HIrN7zONdIEWg==
@@ -815,7 +815,7 @@
     semver "^7.3.7"
     tsutils "^3.21.0"
 
-"@typescript-eslint/parser@^5.33.1":
+"@typescript-eslint/parser@^5.40.1":
   version "5.40.1"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-5.40.1.tgz#e7f8295dd8154d0d37d661ddd8e2f0ecfdee28dd"
   integrity sha512-IK6x55va5w4YvXd4b3VrXQPldV9vQTxi5ov+g4pMANsXPTXOcfjx08CRR1Dfrcc51syPtXHF5bgLlMHYFrvQtg==
@@ -4953,7 +4953,7 @@ typescript-coverage-report@^0.6.4:
     semantic-ui-react "^0.88.2"
     type-coverage-core "^2.17.2"
 
-typescript@^4.0.5:
+typescript@^4.8.4:
   version "4.8.4"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.8.4.tgz#c464abca159669597be5f96b8943500b238e60e6"
   integrity sha512-QCh+85mCy+h0IGff8r5XWzOVSbBO+KfeYrMQh7NJ58QujwcE22u+NUSmUxqF+un70P9GXKxa2HCNiTTMJknyjQ==
