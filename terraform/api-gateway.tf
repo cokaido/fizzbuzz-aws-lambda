@@ -1,6 +1,5 @@
 //TODO : Parametrize domain solidroots.es
 
-
 resource "aws_apigatewayv2_api" "api_gateway" {
   name          = var.app_name
   protocol_type = "HTTP"
@@ -11,13 +10,14 @@ resource "aws_apigatewayv2_api" "api_gateway" {
     allow_origins = ["*"]
   }
 }
+
 resource "aws_apigatewayv2_stage" "api_gateway_stage" {
   api_id = aws_apigatewayv2_api.api_gateway.id
 
   name        = "${var.app_name}_stage"
   auto_deploy = true
-
 }
+
 resource "aws_apigatewayv2_api_mapping" "api_gateway_mapping" {
   api_id      = aws_apigatewayv2_api.api_gateway.id
   domain_name = aws_apigatewayv2_domain_name.solidroots-domain.id

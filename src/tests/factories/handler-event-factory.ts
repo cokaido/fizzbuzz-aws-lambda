@@ -5,7 +5,7 @@ import {
 } from 'aws-lambda';
 
 const DEFAULT_OPTIONS = {
-  method: 'GET',
+  method: 'POST',
   headers: {},
   query: {},
   path: '/',

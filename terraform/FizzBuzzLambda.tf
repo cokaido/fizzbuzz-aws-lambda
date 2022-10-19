@@ -2,7 +2,6 @@
 #Lambda
 
 resource "aws_lambda_function" "fizzbuzz_lambda" {
-
   filename         = "../dist/index.zip"
   function_name    = "fizzbuzz"
   handler          = "fizzbuzz.handler"
@@ -12,7 +11,7 @@ resource "aws_lambda_function" "fizzbuzz_lambda" {
   runtime = "nodejs16.x"
 }
 
-# API Gateway 
+# API Gateway
 resource "aws_apigatewayv2_route" "fizzbuzz_lambda_route" {
   api_id    = aws_apigatewayv2_api.api_gateway.id
   route_key = "ANY /fizzbuzz"
@@ -37,7 +36,6 @@ resource "aws_lambda_permission" "fizzbuzz_lambda_permissions" {
 
   source_arn = "${aws_apigatewayv2_api.api_gateway.execution_arn}/*/*"
 }
-
 
 # Cloudwatch group
 resource "aws_cloudwatch_log_group" "fizzbuzz_log_group" {

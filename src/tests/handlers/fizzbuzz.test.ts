@@ -3,7 +3,7 @@ import { constructAPIGwEvent } from '../factories/handler-event-factory';
 
 describe('Test fizzbuzz lambda', () => {
   it('should return Fizz when called with 3', async () => {
-    const event = constructAPIGwEvent({}, { method: 'GET' });
+    const event = constructAPIGwEvent({ number: '3' }, { method: 'POST' });
 
     const result = await handler(event);
 

@@ -17,6 +17,7 @@ variable "department" {
 provider "aws" {
   region = var.region
 }
+
 terraform {
   backend "s3" {
     bucket         = "solid-software-engineering-terraform-state"
