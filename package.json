@@ -19,7 +19,7 @@
     },
 
     "dependencies": {
-        "aws-sdk": "^2.1201.0",
+        "aws-sdk": "^2.1235.0",
         "source-map-support": "^0.5.19"
     },
     "devDependencies": {
