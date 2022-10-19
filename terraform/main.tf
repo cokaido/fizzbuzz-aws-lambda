@@ -17,12 +17,3 @@ variable "department" {
 provider "aws" {
   region = var.region
 }
-
-terraform {
-  backend "s3" {
-    bucket         = "solid-software-engineering-terraform-state"
-    dynamodb_table = "solid-software-engineering-tf-locks"
-    region         = "us-west-2"
-    #key provided by command line parameter
-  }
-}

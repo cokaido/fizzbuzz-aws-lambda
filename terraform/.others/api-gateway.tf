@@ -1,5 +1,22 @@
 //TODO : Parametrize domain example.es
 
+# API Gateway
+resource "aws_apigatewayv2_route" "fizzbuzz_lambda_route" {
+  api_id    = aws_apigatewayv2_api.api_gateway.id
+  route_key = "ANY /fizzbuzz"
+  target    = "integrations/${aws_apigatewayv2_integration.fizzbuzz_lambda_integration.id}"
+}
+
+resource "aws_apigatewayv2_integration" "fizzbuzz_lambda_integration" {
+  api_id               = aws_apigatewayv2_api.api_gateway.id
+  integration_type     = "AWS_PROXY"
+  connection_type      = "INTERNET"
+  description          = "FizzBuzz Lambda"
+  integration_method   = "POST"
+  integration_uri      = aws_lambda_function.fizzbuzz_lambda.invoke_arn
+  passthrough_behavior = "WHEN_NO_MATCH"
+}
+
 resource "aws_apigatewayv2_api" "api_gateway" {
   name          = var.app_name
   protocol_type = "HTTP"
