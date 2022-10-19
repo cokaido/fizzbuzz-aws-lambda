@@ -1,4 +1,4 @@
-//TODO : Parametrize domain solidroots.es
+//TODO : Parametrize domain example.es
 
 resource "aws_apigatewayv2_api" "api_gateway" {
   name          = var.app_name
@@ -20,12 +20,12 @@ resource "aws_apigatewayv2_stage" "api_gateway_stage" {
 
 resource "aws_apigatewayv2_api_mapping" "api_gateway_mapping" {
   api_id      = aws_apigatewayv2_api.api_gateway.id
-  domain_name = aws_apigatewayv2_domain_name.solidroots-domain.id
+  domain_name = aws_apigatewayv2_domain_name.example-domain.id
   stage       = aws_apigatewayv2_stage.api_gateway_stage.id
 }
 
-resource "aws_apigatewayv2_domain_name" "solidroots-domain" {
-  domain_name = "${var.app_name}.solidroots.es"
+resource "aws_apigatewayv2_domain_name" "example-domain" {
+  domain_name = "${var.app_name}.example.es"
 
   domain_name_configuration {
     certificate_arn = data.aws_acm_certificate.certificate.arn
@@ -35,7 +35,7 @@ resource "aws_apigatewayv2_domain_name" "solidroots-domain" {
 }
 
 data "aws_acm_certificate" "certificate" {
-  domain   = "*.solidroots.es"
+  domain   = "*.example.es"
   statuses = ["ISSUED"]
 }
 
