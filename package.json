@@ -24,7 +24,7 @@
   "devDependencies": {
     "@types/aws-lambda": "^8.10.108",
     "@types/jest": "^26.0.14",
-    "@types/node": "^18.11.4",
+    "@types/node": "^18.11.9",
     "eslint": "^8.26.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
