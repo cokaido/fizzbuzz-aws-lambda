@@ -33,7 +33,7 @@
     "eslint-plugin-simple-import-sort": "^8.0.0",
     "eslint-plugin-sonarjs": "^0.17.0",
     "@typescript-eslint/eslint-plugin": "^5.47.0",
-    "@typescript-eslint/parser": "^5.47.0",
+    "@typescript-eslint/parser": "^5.47.1",
     "husky": "^8.0.2",
     "esbuild": "^0.16.10",
     "jest": "^26.6.0",
